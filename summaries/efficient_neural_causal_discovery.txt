@@ -1,0 +1,11 @@
+A continuous optimization based approach. Unlike Notears which uses
+restrictions on the optimization problem to keep the final model acyclic, this
+method uses regularization to penalize cyclic models. Apart for the data over
+the variables it also requires interventional data. Works in two steps: 1)
+Distribution fitting 2) Graph fitting. In the first step trains a bunch of NNs
+for each variable in the model with all other variables as parents with some
+dropout like feature for sparsity. In the second step uses the interventional data to
+score all possible edges in the model with couple of parameters which is defined in
+a way such that only one direction is possible between any two edges. The algorithm
+alternates between the two steps. Final graph is obtained by checking the parameters
+of step 2. Can be exteded for bi-directed edges.
