@@ -1,0 +1,19 @@
+In epidemiology studies measuring the change in some variables, a common
+approach to get causal effect is to use the baseline score of the variable
+(whose change we are measuring) as the adjustment variable (along with others).
+The paper takes an example of the effect of education on cognitive decline. The
+two models compared are:
+
+$$ (score_i2 - score_i1) ~ education + score_i1 $$
+
+and
+
+$$ (score_i2 - score_i1) ~ education $$
+
+An analysis is done based on both these models using the AHEAD dataset to show
+that the causal effects estimated by these two models are different. Hence, one
+of them has to have some kind of bias in the estimate. The authors then try to
+explain this bias in the first model using DAGs showing that doing the
+adjustment on score_i1 leads to opening of a biasing path. The authors further
+show couple of different possiblities that can happen because of baseline
+adjustment.
