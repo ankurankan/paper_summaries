@@ -1,0 +1,9 @@
+Claims: 
+
+1. Optimization based method to determine the optimal intervention to minimize the MSE b/w the counterfactual of the objective variable and the value given by user.
+2. Combines an estimated causal structure with regression model that can improve individual-leval causal effect estimation.
+3. Theoretical analysis needed for non-linear structures.
+
+Method:
+
+Start by training two models: 1) A simple machine learning based model with the target variable being the variable which we want to optimize for. 2) A causal structure on all the variables. Next modify the causal structure by adding a new variable which is the child of all the variables in the original causal model (This new link can be represented using either a linear system or a neural network). Next, use a single observed datapoint to compute the error terms of the variables in the causal structure as this is required for estimating the counterfactual values. This now gives us an optimization based method to minimize the distance between the user defined value and the estimate from the model.

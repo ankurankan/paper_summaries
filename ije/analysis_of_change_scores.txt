@@ -1,0 +1,4 @@
+Modeling change scores are very common in health sciences but hasn't received much
+attention in causal inference. The paper uses DAGs to explain why analysis of 
+change scores do not estimate the causal effects in observational data and the
+potential misleading consequences of doing so.
