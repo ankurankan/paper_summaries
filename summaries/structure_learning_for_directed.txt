@@ -1,0 +1,4 @@
+Score based structure learning algorithm for tree based structures. Provides guarantess in non-linear dependent 
+variables to recover the true causal structure. Uses regression method to compute the edge weight for each of the
+variable from all other variables. Using these weights Chu-liu algorithm is then used to recover the true 
+causal structure.
